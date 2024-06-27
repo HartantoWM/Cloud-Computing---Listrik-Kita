@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Penggunaan Listrik</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Kalkulator Penggunaan Listrik</h1>
+
+    <form id="kalkulator">
+        <div class="form-group">
+            <label for="namaDevice">Nama Perangkat:</label>
+            <input type="text" id="namaDevice" name="namaDevice" required>
+        </div>
+
+        <div class="form-group">
+            <label for="dayaWatt">Daya (Watt):</label>
+            <input type="number" id="dayaWatt" name="dayaWatt" required min="1">
+        </div>
+
+        <div class="form-group">
+            <label for="durasiPemakaian">Durasi Pemakaian (Jam/hari):</label>
+            <input type="number" id="durasiPemakaian" name="durasiPemakaian" required min="0.5">
+        </div>
+
+        <div class="form-group">
+            <label for="jumlahPerangkat">Jumlah Perangkat:</label>
+            <input type="number" id="jumlahPerangkat" name="jumlahPerangkat" required min="1">
+        </div>
+
+        <button type="button" onclick="hitungPemakaian()">Hitung</button>
+    </form>
+
+    <div id="hasil">
+        <h2>Hasil Perhitungan</h2>
+        <p id="pemakaianHarian">Pemakaian Harian: 0 kWh</p>
+        <p id="pemakaianBulanan">Pemakaian Bulanan: 0 kWh</p>
+        <p id="biayaBulanan">Biaya Bulanan: Rp 0</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
