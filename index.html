@@ -1,45 +1,65 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kalkulator Penggunaan Listrik</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalkulator Hemat Listrik</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"> </head>
 <body>
-    <h1>Kalkulator Penggunaan Listrik</h1>
+  <div class="container">
+    <h1>Kalkulator Hemat Listrik</h1>
 
     <form id="kalkulator">
-        <div class="form-group">
-            <label for="namaDevice">Nama Perangkat:</label>
-            <input type="text" id="namaDevice" name="namaDevice" required>
-        </div>
+      <div class="form-group">
+        <label for="namaDevice">Nama Perangkat:</label>
+        <select id="namaDevice" name="namaDevice" required>
+          <option value="">Pilih Perangkat</option>
+          <option value="televisi">Televisi</option>
+          <option value="kulkas">Kulkas</option>
+          <option value="rice_cooker">Rice Cooker</option>
+          <option value="lampu">Lampu</option>
+          <option value="kipas_angin">Kipas Angin</option>
+        </select>
+      </div>
 
-        <div class="form-group">
-            <label for="dayaWatt">Daya (Watt):</label>
-            <input type="number" id="dayaWatt" name="dayaWatt" required min="1">
-        </div>
+      <div class="form-group">
+        <label for="dayaWatt">Daya (Watt):</label>
+        <input type="number" id="dayaWatt" name="dayaWatt" required min="1">
+        <span class="icon"><i class="fas fa-watt"></i></span> </div>
 
-        <div class="form-group">
-            <label for="durasiPemakaian">Durasi Pemakaian (Jam/hari):</label>
-            <input type="number" id="durasiPemakaian" name="durasiPemakaian" required min="0.5">
-        </div>
+      <div class="form-group">
+        <label for="durasiPemakaian">Durasi Pemakaian per Hari (Jam):</label>
+        <input type="number" id="durasiPemakaian" name="durasiPemakaian" required min="0.5">
+        <span class="icon"><i class="fas fa-clock"></i></span> </div>
 
-        <div class="form-group">
-            <label for="jumlahPerangkat">Jumlah Perangkat:</label>
-            <input type="number" id="jumlahPerangkat" name="jumlahPerangkat" required min="1">
-        </div>
+      <div class="form-group">
+        <label for="jumlahPerangkat">Jumlah Perangkat:</label>
+        <input type="number" id="jumlahPerangkat" name="jumlahPerangkat" required min="1">
+        <span class="icon"><i class="fas fa-cubes"></i></span> </div>
 
-        <button type="button" onclick="hitungPemakaian()">Hitung</button>
+      <button type="button" onclick="hitungPemakaian()">Hitung</button>
     </form>
 
-    <div id="hasil">
-        <h2>Hasil Perhitungan</h2>
-        <p id="pemakaianHarian">Pemakaian Harian: 0 kWh</p>
-        <p id="pemakaianBulanan">Pemakaian Bulanan: 0 kWh</p>
-        <p id="biayaBulanan">Biaya Bulanan: Rp 0</p>
+    <div id="hasil" class="hasil-tersembunyi">
+      <h2>Hasil Perhitungan</h2>
+      <p id="pemakaianHarian">Pemakaian Harian: 0 kWh</p>
+      <p id="pemakaianBulanan">Pemakaian Bulanan: 0 kWh</p>
+      <p id="biayaBulanan">Biaya Bulanan: Rp 0</p>
     </div>
 
-    <script src="script.js"></script>
+    <div id="tips-hemat-listrik">
+      <h2>Tips Hemat Listrik</h2>
+      <ul>
+        <li>Matikan lampu dan peralatan elektronik saat tidak digunakan.</li>
+        <li>Gunakan peralatan elektronik hemat energi.</li>
+        <li>Cabut kabel charger yang tidak digunakan.</li>
+        <li>Manfaatkan cahaya alami.</li>
+        <li>Rutin membersihkan AC.</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
