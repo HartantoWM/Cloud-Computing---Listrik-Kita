@@ -2,51 +2,50 @@ body {
     font-family: sans-serif;
     margin: 20px;
     background-color: #f2f2f2;
-    background-image: url("https://www.freepik.com/free-photos-vectors/listrik"); /* Background image */
+    background-image: url("https://www.freepik.com/free-photos-vectors/listrik");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-  }
+}
   
-  .container {
+.container {
     width: 80%;
     margin: 0 auto;
     padding: 20px;
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Closing parenthesis added */
-  }
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
   
-  
-  h1 {
+h1 {
     text-align: center;
     color: #333;
-  }
+}
   
-  #kalkulator {
+#kalkulator {
     width: 100%;
-  }
+}
   
-  .form-group {
+.form-group {
     margin-bottom: 15px;
-  }
+}
   
-  label {
+label {
     display: block;
     margin-bottom: 5px;
     color: #777;
-  }
+}
   
-  input[type="text"],
-  input[type="number"] {
+input[type="text"],
+input[type="number"] {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
-  }
+}
   
-  button {
+button {
     padding: 10px 20px;
     background-color: #007bff;
     color: white;
@@ -54,47 +53,73 @@ body {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
+    margin-right: 10px;
+}
   
-  button:hover {
+button:hover {
     background-color: #0056b3;
-  }
+}
   
-  #hasil {
+#hasil,
+#riwayat {
     margin-top: 30px;
     text-align: center;
-    display: none; /* Sembunyikan hasil pada awalnya */
-  }
-  
-  #hasil.tampil { /* Kelas untuk menampilkan hasil */
+    display: none;
+}
+
+#hasil.tampil,
+#riwayat.tampil {
     display: block;
-  }
+}
   
-  #pemakaianHarian,
-  #pemakaianBulanan,
-  #biayaBulanan {
+#pemakaianHarian,
+#pemakaianBulanan,
+#biayaBulanan {
     font-weight: bold;
     margin-bottom: 10px;
-  }
+}
   
-  #tips-hemat-listrik {
+#tips-hemat-listrik {
     margin-top: 20px;
     padding: 20px;
     background-color: #f8f9fa;
     border-radius: 10px;
-  }
+}
   
-  #tips-hemat-listrik h2 {
+#tips-hemat-listrik h2 {
     text-align: center;
     color: #333;
-  }
+}
   
-  #tips-hemat-listrik ul {
+#tips-hemat-listrik ul {
     list-style: none;
     padding: 0;
-  }
+}
   
-  #tips-hemat-listrik li {
+#tips-hemat-listrik li {
     margin-bottom: 10px;
-  }
-  
+}
+
+/* Gaya untuk card riwayat */
+.riwayat-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.riwayat-card input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.riwayat-card .crud-buttons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.riwayat-card .crud-buttons button {
+    margin-right: 5px;
+    cursor: pointer;
+}
